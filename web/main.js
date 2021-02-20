@@ -1,35 +1,52 @@
 const result = document.getElementById('result');
+const studentDetails = document.getElementById('studentDetails');
+const mailDetails = document.getElementById('mailDetails');
 
 const faceDetails = () => {
+    studentDetails.classList.add('hide');
     eel.mainMenu(2, {
         "id": document.getElementById('id').value,
         "name": document.getElementById('name').value,
+    })(function (response) {
+        alert(response);
     })
+    return false;
 }
 
-const mailDetails = () => {
-    eel.mainMenu(2, {
-        "id": document.getElementById('id').value,
-        "name": document.getElementById('name').value,
+const sendMail = () => {
+    mailDetails.classList.add('hide');
+    eel.mainMenu(5, {
+        "receiver": document.getElementById('receiver').value,
+    })(function (response) {
+        alert(response);
     })
+    return false;
 }
 
 function checkCamera() {
-    eel.mainMenu(1);
+    eel.mainMenu(1)(function (response) {
+        alert(response);
+    });
 }
 
 function captureFaces() {
-    document.getElementById('studentDetails').classList.toggle('hide');
+    mailDetails.classList.add('hide');
+    studentDetails.classList.toggle('hide');
 }
 
 function trainImages() {
-    eel.mainMenu(3);
+    eel.mainMenu(3)(function (response) {
+        alert(response);
+    });
 }
 
 function recordAttendance() {
-    eel.mainMenu(4);
+    eel.mainMenu(4)(function (response) {
+        alert(response);
+    });
 }
 
 function mail() {
-    eel.mainMenu(5);
+    studentDetails.classList.add('hide');
+    mailDetails.classList.toggle('hide');
 }

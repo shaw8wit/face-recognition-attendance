@@ -5,7 +5,8 @@ from PIL import Image
 from threading import Thread
 
 
-# -------------- image label ------------------------
+# -------------- image labesl ------------------------
+
 def getImagesAndLabels(path):
     # get the path of all the files in the folder
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
@@ -32,8 +33,7 @@ def getImagesAndLabels(path):
 # ----------- train images function ---------------
 def trainImages():
     recognizer = cv2.face.LBPHFaceRecognizer_create()
-    harcascadePath = "haarcascade_frontalface_default.xml"
     faces, Id = getImagesAndLabels("TrainingImage")
     Thread(target=recognizer.train(faces, np.array(Id))).start()
     recognizer.save("TrainingImageLabel"+os.sep+"Trainner.yml")
-    print("Trained Using All Images")
+    return "Trained Model Using All Images"

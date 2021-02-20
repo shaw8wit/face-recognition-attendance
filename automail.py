@@ -3,7 +3,7 @@ import os
 import datetime
 
 
-def send(reciever):
+def sendMail(reciever):
     date = datetime.date.today().strftime("%B %d, %Y")
     path = 'Attendance'
     os.chdir(path)
