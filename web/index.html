@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Face Recognition Attendance System</h1>
+    <button onclick="checkCamera()">Check Camera</button>
+    <button onclick="captureFaces()">Capture Faces</button>
+    <button onclick="trainImages()">Train Images</button>
+    <button onclick="recordAttendance()">Recognize & Attendance</button>
+    <button onclick="mail()">Auto Mail</button>
+    <div id="result"></div>
+    <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
+        <input type="text" id="id">
+        <input type="text" id="name">
+        <button type="submit">Submit</button>
+    </form>
+    <form id="mailDetails" onsubmit="return mailDetails()" class="hide">
+        <input type="email" id="receiver">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

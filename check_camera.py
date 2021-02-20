@@ -1,7 +1,7 @@
 import cv2
 
 
-def camer():
+def check():
 
     # Load the cascade
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -34,3 +34,4 @@ def camer():
     # Release the VideoCapture object
     cap.release()
     cv2.destroyAllWindows()
+    return "Camera Check Finished!"
