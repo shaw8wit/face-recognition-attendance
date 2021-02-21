@@ -12,7 +12,7 @@ def sendMail(reciever):
     filename = newest
     sub = "Attendance Report for " + str(date)
     # mail information
-    yag = yagmail.SMTP("shaw9wit@gmail.com", "")
+    yag = yagmail.SMTP("shaw9wit@gmail.com", "TittySlapper@69")
 
     # sent the mail
     yag.send(

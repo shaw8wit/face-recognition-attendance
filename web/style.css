@@ -29,11 +29,6 @@ body {
     margin: 0 auto;
 }
 
-/* hiding the form */
-.hide {
-    display: none;
-  
-}
 
 /* buttons settings */
 
@@ -55,16 +50,20 @@ button {
 }
 
 /* hue rotate for alternate buttons */
-button:nth-child(1) {
-    filter: hue-rotate(290deg);
+button:nth-child(2) {
+    filter: hue-rotate(72deg);
 }
 
 button:nth-child(3) {
-    filter: hue-rotate(110deg);
+    filter: hue-rotate(144deg);
+}
+
+button:nth-child(4) {
+    filter: hue-rotate(216deg);
 }
 
 button:nth-child(5) {
-    filter: hue-rotate(210deg);
+    filter: hue-rotate(288deg);
 }
 
 /* buttons hover effects*/
@@ -76,7 +75,6 @@ button:hover {
 }
 
 /* button span for center and absolute display*/
-
 button span {
     position: absolute;
     display: block;
@@ -175,7 +173,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* css for attractive forms */
 
-.abc {
+#studentDetails {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -187,7 +185,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
 }
 
-.modal {
+#mailDetails {
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);

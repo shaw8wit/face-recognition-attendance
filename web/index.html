@@ -25,7 +25,7 @@
     <button id="btnn" onclick="captureFaces()">
       <span></span><span></span><span></span><span></span>Capture Faces
     </button>
-    <button  onclick="trainImages()">
+    <button onclick="trainImages()">
       <span></span><span></span><span></span><span></span>Train Images
     </button>
     <button onclick="recordAttendance()">
@@ -50,51 +50,31 @@
   </form>
     </form> -->
 
-  <div class="abc">
+  <div id="studentDetails" style="display: none">
     <div class="modal-content">
       <div class="close">+</div>
       <label>Student Details</label>
-      <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
-        <input type="number" min="1" id="id" placeholder="Enter Roll"/>
-        <input type="text" id="name"  placeholder="Enter Name" />
+      <form onsubmit="return faceDetails()" class="hide">
+        <input type="number" min="1" id="id" placeholder="Enter Roll" />
+        <input type="text" id="name" placeholder="Enter Name" />
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
 
-  <div class="modal">
+  <div id="mailDetails" style="display: none">
     <div class="modal-content2">
       <div class="close1">+</div>
       <label>Email Details</label>
-      <form id="mailDetails" onsubmit="return sendMail()" class="hide">
-        <input type="email" id="receiver"  placeholder="Enter Email" />
-        <button type="submit" >Submit</button>
+      <form onsubmit="return sendMail()" class="hide">
+        <input type="email" id="receiver" placeholder="Enter Email" />
+        <button type="submit">Submit</button>
       </form>
       </form>
     </div>
   </div>
 
 
-  <script>
-    /* opening and closing popup */
-
-   document.getElementById('btnn').addEventListener('click',function(){
-     document.querySelector('.abc').style.display = "flex";
-   });
-
-   document.getElementById('btnn-2').addEventListener('click',function(){
-     document.querySelector('.modal').style.display = "flex";
-   });
-
-   document.querySelector('.close').addEventListener("click", function() {
-	document.querySelector('.abc').style.display = "none";
-   });
-
-  document.querySelector('.close1').addEventListener("click", function() {
-	document.querySelector('.modal').style.display = "none";
-});
-
-  </script>
 
   <script type="text/javascript" src="/eel.js"></script>
   <script type="text/javascript" src="main.js"></script>

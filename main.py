@@ -1,10 +1,11 @@
 import os  # accessing the os functions
+import eel
+
 import check_camera
 import capture_image
 import train_image
 import record
 import automail
-import eel
 
 eel.init('web')
 
