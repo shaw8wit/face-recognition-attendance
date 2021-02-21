@@ -176,7 +176,7 @@ input[type=number]::-webkit-outer-spin-button {
 #studentDetails {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
 
@@ -186,9 +186,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #mailDetails {
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
 
@@ -214,7 +214,7 @@ input[type=number]::-webkit-outer-spin-button {
 .modal-content {
     width: 500px;
     height: 300px;
-    background-color: white;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 4px;
     text-align: center;
 
@@ -226,11 +226,12 @@ input[type=number]::-webkit-outer-spin-button {
 .modal-content2 {
     width: 600px;
     height: 300px;
-    background-color: white;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 4px;
     text-align: center;
     padding: 60px;
     position: relative;
+    
 
 }
 
@@ -244,12 +245,12 @@ input {
     padding: 20px 0px;
     height: 56px;
     border: none;
-    border-bottom: solid 2px rgba(51, 45, 45, 0.1);
-    background: #fff;
+    border-bottom: solid 2px rgba(255,255,255,0.3);
+    background:transparent;
     width: 280px;
     box-sizing: border-box;
     transition: all .3s linear;
-    color: #000;
+    color: #fff;
     font-weight: 400;
     -webkit-appearance: none;
 }
@@ -272,6 +273,7 @@ input:focus {
     font-size: 42px;
     transform: rotate(45deg);
     cursor: pointer;
+    color: antiquewhite;
 }
 
 .close1 {
@@ -281,4 +283,8 @@ input:focus {
     font-size: 42px;
     transform: rotate(45deg);
     cursor: pointer;
+    color: antiquewhite;
 }
+
+/* Popup Button styling  */
+

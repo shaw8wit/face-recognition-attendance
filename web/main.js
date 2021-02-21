@@ -7,7 +7,7 @@ const show = (element) => {
 }
 
 const hide = (element) => {
-    element.style.display = "none";
+    element.style.display = "none";   
 }
 
 const faceDetails = () => {
