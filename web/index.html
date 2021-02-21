@@ -19,7 +19,7 @@
   <h1 class="heading">Face Recognition Attendance System</h1>
   <hr class="heading-line" />
   <div class="buttons-div">
-    <button onclick="checkCamera()">
+    <button onclick="checkCamera()" id="btnn3">
       <span></span><span></span><span></span><span></span>Check Camera
     </button>
     <button id="btnn" onclick="captureFaces()">
@@ -37,7 +37,8 @@
   </div>
 
   <div id="result"></div>
-  <div id="alert-me" class="hide"></div>
+
+  <!-- <div id="alert-me" style="display: none" ></div>  id="btnn3" -->
 
   <!-- <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
       <input type="number" min="1" id="id" />
@@ -75,6 +76,12 @@
   </div>
 
 
+  <!--This is alert-popup stuff-->
+<div id="alertpopup" style="display: none;">
+  <div id="modalpopup">
+    <label>This is Popup alert.</label>
+  </div>
+</div>
 
   <script type="text/javascript" src="/eel.js"></script>
   <script type="text/javascript" src="main.js"></script>
