@@ -2,37 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .hide {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>FRAS</title>
+
+  <style>
+    /* moved to seperate file */
+  </style>
+
+
 </head>
 
 <body>
-    <h1>Face Recognition Attendance System</h1>
-    <button onclick="checkCamera()">Check Camera</button>
-    <button onclick="captureFaces()">Capture Faces</button>
-    <button onclick="trainImages()">Train Images</button>
-    <button onclick="recordAttendance()">Record Attendance</button>
-    <button onclick="mail()">Send Mail</button>
-    <div id="result"></div>
-    <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
-        <input type="number" min="1" id="id">
-        <input type="text" id="name">
-        <button type="submit">Submit</button>
-    </form>
-    <form id="mailDetails" onsubmit="return sendMail()" class="hide">
-        <input type="email" id="receiver">
-        <button type="submit">Submit</button>
-    </form>
+  <h1 class="heading">Face Recognition Attendance System</h1>
+  <hr class="heading-line" />
+  <div class="buttons-div">
+    <button onclick="checkCamera()">
+      <span></span><span></span><span></span><span></span>Check Camera
+    </button>
+    <button id="btnn" onclick="captureFaces()">
+      <span></span><span></span><span></span><span></span>Capture Faces
+    </button>
+    <button  onclick="trainImages()">
+      <span></span><span></span><span></span><span></span>Train Images
+    </button>
+    <button onclick="recordAttendance()">
+      <span></span><span></span><span></span><span></span>Record Attendance
+    </button>
+    <button id="btnn-2" onclick="mail()">
+      <span></span><span></span><span></span><span></span>Send Mail
+    </button>
+  </div>
 
-    <script type="text/javascript" src="/eel.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+  <div id="result"></div>
+  <div id="alert-me" class="hide"></div>
+
+  <!-- <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
+      <input type="number" min="1" id="id" />
+      <input type="text" id="name" />
+      <button type="submit">Submit</button>
+
+        <form id="mailDetails" onsubmit="return sendMail()" class="hide">
+    <input type="email" id="receiver" />
+    <button type="submit">Submit</button>
+  </form>
+    </form> -->
+
+  <div class="abc">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <label>Student Details</label>
+      <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
+        <input type="number" min="1" id="id" placeholder="Enter Roll"/>
+        <input type="text" id="name"  placeholder="Enter Name" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-content2">
+      <div class="close1">+</div>
+      <label>Email Details</label>
+      <form id="mailDetails" onsubmit="return sendMail()" class="hide">
+        <input type="email" id="receiver"  placeholder="Enter Email" />
+        <button type="submit" >Submit</button>
+      </form>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    /* opening and closing popup */
+
+   document.getElementById('btnn').addEventListener('click',function(){
+     document.querySelector('.abc').style.display = "flex";
+   });
+
+   document.getElementById('btnn-2').addEventListener('click',function(){
+     document.querySelector('.modal').style.display = "flex";
+   });
+
+   document.querySelector('.close').addEventListener("click", function() {
+	document.querySelector('.abc').style.display = "none";
+   });
+
+  document.querySelector('.close1').addEventListener("click", function() {
+	document.querySelector('.modal').style.display = "none";
+});
+
+  </script>
+
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

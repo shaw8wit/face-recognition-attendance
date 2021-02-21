@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: poppins;
+    box-sizing: border-box;
+}
+
+/* css for body*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #050801;
+}
+
+/* heading css */
+.heading {
+    text-align: center;
+    color: #f3a4a1;
+    font-size: 2.6rem;
+}
+
+/* line css*/
+.heading-line {
+    color: #db716e;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* hiding the form */
+.hide {
+    display: none;
+  
+}
+
+/* buttons settings */
+
+button {
+    background: none;
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 25px 20px;
+    margin: 40px 0;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* hue rotate for alternate buttons */
+button:nth-child(1) {
+    filter: hue-rotate(290deg);
+}
+
+button:nth-child(3) {
+    filter: hue-rotate(110deg);
+}
+
+button:nth-child(5) {
+    filter: hue-rotate(210deg);
+}
+
+/* buttons hover effects*/
+button:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+}
+
+/* button span for center and absolute display*/
+
+button span {
+    position: absolute;
+    display: block;
+}
+
+/* buttons-span css for neon settings with their respective keyframes*/
+button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* removing number field spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* css for attractive forms */
+
+.abc {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content label {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.modal-content2 label {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.modal-content {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+
+    padding: 20px;
+    position: relative;
+
+}
+
+.modal-content2 {
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 60px;
+    position: relative;
+
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #993733;
+}
+
+input {
+    font-size: 16px;
+    padding: 20px 0px;
+    height: 56px;
+    border: none;
+    border-bottom: solid 2px rgba(51, 45, 45, 0.1);
+    background: #fff;
+    width: 280px;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    color: #000;
+    font-weight: 400;
+    -webkit-appearance: none;
+}
+
+input {
+    width: calc(100% - 44px);
+    margin-left: auto;
+    display: flex;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close1 {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
