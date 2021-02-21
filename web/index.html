@@ -59,6 +59,7 @@
         <input type="number" min="1" id="id" placeholder="Enter Roll" />
         <input type="text" id="name" placeholder="Enter Name" />
         <button type="submit" class="submit-button">Submit</button>
+        <button type="reset" class="clear-button">Clear</button>
       </form>
     </div>
   </div>
@@ -70,6 +71,7 @@
       <form onsubmit="return sendMail()" class="hide">
         <input type="email" id="receiver" placeholder="Enter Email" />
         <button type="submit" class="submit-button">Submit</button>
+        <button type="reset" class="clear-button">Clear</button>
       </form>
       </form>
     </div>
@@ -77,11 +79,11 @@
 
 
   <!--This is alert-popup stuff-->
-<div id="alertpopup" style="display: none;">
-  <div id="modalpopup">
-    <label>This is Popup alert.</label>
+  <div id="alertpopup" style="display: none;">
+    <div id="modalpopup">
+      <label>This is Popup alert.</label>
+    </div>
   </div>
-</div>
 
   <script type="text/javascript" src="/eel.js"></script>
   <script type="text/javascript" src="main.js"></script>

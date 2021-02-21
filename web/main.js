@@ -11,42 +11,38 @@ const show = (element) => {
 const hide = (element) => {
   element.style.display = "none";
 };
-const showalert = (alertme) => {
-  alertme.style.display = "flex";
+
+const showAlert = (content) => {
+  show(alertme);
+  document.getElementById('modalpopup').innerHTML = content;
+  setTimeout(() => {
+    hide(alertme);
+  }, 2000);
 };
 
 const faceDetails = () => {
   hide(studentDetails);
-  // eel.mainMenu(2, {
-  //     "id": document.getElementById('id').value,
-  //     "name": document.getElementById('name').value,
-  // })(function (response) {
-  //     alert(response);
-  // })
-
-  // return false;
+  eel.mainMenu(2, {
+    "id": document.getElementById('id').value,
+    "name": document.getElementById('name').value,
+  })(function (response) {
+    showAlert(response);
+  });
+  return false;
 };
 
 const sendMail = () => {
   hide(mailDetails);
-  // eel.mainMenu(5, {
-  //     "receiver": document.getElementById('receiver').value,
-  // })(function (response) {
-  //     alert(response);
-  // })
-  //return false;
+  eel.mainMenu(5, {
+    "receiver": document.getElementById('receiver').value,
+  })((response) => {
+    showAlert(response);
+  });
+  return false;
 };
 
 function checkCamera() {
-  //eel.mainMenu(1)(function (response) {
-  //     alert(response);
-
-  // });
-  showalert(alertme);
-  setTimeout(function () {
-    document.getElementById("alertpopup").style.display = "none";
-  }, 2000);
-  
+  eel.mainMenu(1)((response) => showAlert(response));
 }
 
 function captureFaces() {
@@ -55,15 +51,15 @@ function captureFaces() {
 }
 
 function trainImages() {
-  // eel.mainMenu(3)(function (response) {
-  //     alert(response);
-  // });
+  eel.mainMenu(3)(function (response) {
+    showAlert(response);
+  });
 }
 
 function recordAttendance() {
-  // eel.mainMenu(4)(function (response) {
-  //     alert(response);
-  // });
+  eel.mainMenu(4)(function (response) {
+    showAlert(response);
+  });
 }
 
 function mail() {

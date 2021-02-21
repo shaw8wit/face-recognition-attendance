@@ -47,6 +47,7 @@ button {
     transition: 0.5s;
     letter-spacing: 4px;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    outline: none;
 }
 
 /* hue rotate for alternate buttons */
@@ -167,8 +168,13 @@ button span:nth-child(4) {
 /* popup button settings */
 .submit-button {
     -webkit-box-reflect: unset;
+    filter: hue-rotate(245deg) !important;
 }
 
+.clear-button {
+    -webkit-box-reflect: unset;
+    filter: hue-rotate(180deg) !important;
+}
 
 /* removing number field spinners */
 input[type=number]::-webkit-inner-spin-button,
