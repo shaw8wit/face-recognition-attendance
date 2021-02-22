@@ -22,8 +22,8 @@ const faceDetails = () => {
   hide(studentDetails);
   eel.mainMenu(2, {
     "id": document.getElementById('id').value,
-    "name": document.getElementById('name').value,
-  })((response) => showAlert(response));
+    "name": document.getElementById('name').value.split(' ').join('_'),
+  })(showAlert);
   return false;
 };
 
@@ -31,12 +31,12 @@ const sendMail = () => {
   hide(mailDetails);
   eel.mainMenu(5, {
     "receiver": document.getElementById('receiver').value,
-  })((response) => showAlert(response));
+  })(showAlert);
   return false;
 };
 
 function checkCamera() {
-  eel.mainMenu(1)((response) => showAlert(response));
+  eel.mainMenu(1)(showAlert);
 }
 
 function captureFaces() {
@@ -45,15 +45,11 @@ function captureFaces() {
 }
 
 function trainImages() {
-  eel.mainMenu(3)(function (response) {
-    showAlert(response);
-  });
+  eel.mainMenu(3)(showAlert);
 }
 
 function recordAttendance() {
-  eel.mainMenu(4)(function (response) {
-    showAlert(response);
-  });
+  eel.mainMenu(4)(showAlert);
 }
 
 function clear() {
