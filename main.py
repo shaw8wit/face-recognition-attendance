@@ -1,4 +1,4 @@
-import os  # accessing the os functions
+# for websockets
 import eel
 
 import check_camera
@@ -29,7 +29,8 @@ def mainMenu(choice, args=True):
             res = record.recordAttendence()
         elif choice == 5:
             res = automail.sendMail(args['receiver'])
-    except ValueError:
+    except Exception as e:
+        print(e)
         return "Something went wrong!"
     return res
 

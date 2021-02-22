@@ -15,9 +15,7 @@ const hide = (element) => {
 const showAlert = (content) => {
   show(alertme);
   document.getElementById('modalpopup').innerHTML = content;
-  setTimeout(() => {
-    hide(alertme);
-  }, 2000);
+  setTimeout(() => hide(alertme), 3000);
 };
 
 const faceDetails = () => {
@@ -25,9 +23,7 @@ const faceDetails = () => {
   eel.mainMenu(2, {
     "id": document.getElementById('id').value,
     "name": document.getElementById('name').value,
-  })(function (response) {
-    showAlert(response);
-  });
+  })((response) => showAlert(response));
   return false;
 };
 
@@ -35,9 +31,7 @@ const sendMail = () => {
   hide(mailDetails);
   eel.mainMenu(5, {
     "receiver": document.getElementById('receiver').value,
-  })((response) => {
-    showAlert(response);
-  });
+  })((response) => showAlert(response));
   return false;
 };
 
@@ -62,10 +56,10 @@ function recordAttendance() {
   });
 }
 
-function clear(){
-  document.getElementById('id').value="";
-  document.getElementById('name').value="";
-  document.getElementById('email').value="";
+function clear() {
+  document.getElementById('id').value = "";
+  document.getElementById('name').value = "";
+  document.getElementById('email').value = "";
 }
 
 function mail() {
@@ -83,10 +77,16 @@ document
 
 document
   .querySelector(".close")
-  .addEventListener("click", () => {hide(studentDetails);clear();});
+  .addEventListener("click", () => {
+    hide(studentDetails);
+    clear();
+  });
 
 document
   .querySelector(".close1")
-  .addEventListener("click", () => {hide(mailDetails);clear();});
+  .addEventListener("click", () => {
+    hide(mailDetails);
+    clear();
+  });
 
 //document.getElementById('btnn3').addEventListener("click",()=> showalert(alertme));
