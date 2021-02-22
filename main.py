@@ -34,4 +34,4 @@ def mainMenu(choice, args=True):
     return res
 
 
-eel.start('index.html', size=(1000, 600))
+eel.start('index.html', size=(1000, 900))
