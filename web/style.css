@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    font: poppins;
+    font-family:Akaya Kanadaka;
     box-sizing: border-box;
 }
 
@@ -13,6 +17,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background: #050801;
+
 }
 
 /* heading css */
@@ -36,17 +41,18 @@ button {
     background: none;
     border: none;
     position: relative;
-    display: inline-block;
+    display: block;
     padding: 25px 20px;
+    width: 350px;
     margin: 40px 0;
     color: #03e9f4;
-    font-size: 24px;
+    font-size: 22px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.5s;
     letter-spacing: 4px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
     outline: none;
 }
 
@@ -167,11 +173,15 @@ button span:nth-child(4) {
 
 /* popup button settings */
 .submit-button {
+    display: inline-block;
+    width: 150px;
     -webkit-box-reflect: unset;
     filter: hue-rotate(245deg) !important;
 }
 
 .clear-button {
+    display: inline-block;
+    width: 150px;
     -webkit-box-reflect: unset;
     filter: hue-rotate(180deg) !important;
 }
@@ -191,7 +201,6 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
-
     justify-content: center;
     align-items: center;
     display: none;
@@ -203,7 +212,6 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
-
     justify-content: center;
     align-items: center;
     display: none;
@@ -220,7 +228,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-
 }
 
 .modal-content {
@@ -229,10 +236,8 @@ input[type=number]::-webkit-outer-spin-button {
     background: rgba(0, 0, 0, 0.9);
     border-radius: 4px;
     text-align: center;
-
     padding: 20px;
     position: relative;
-
 }
 
 .modal-content2 {
@@ -243,8 +248,6 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     padding: 60px;
     position: relative;
-
-
 }
 
 label {
@@ -303,7 +306,7 @@ input:focus {
 #alertpopup {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 0;
     /*display: flex;*/
@@ -313,12 +316,16 @@ input:focus {
 }
 
 #modalpopup {
-    width: 500px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.3);
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    /*background: rgba(255, 255, 255, 0.7);*/
     border-radius: 4px;
     text-align: center;
-
-    padding: 20px;
+    padding: 60px 50px ;
     position: relative;
+    color:  #f3a4a1;
+    font-family:Poppins;
+    font-size: 25px;
+    text-align: center;
 }

@@ -7,17 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <title>FRAS</title>
-
-  <style>
-    /* moved to seperate file */
-  </style>
-
-
 </head>
 
 <body>
+  <!-- this is heading -->
   <h1 class="heading">Face Recognition Attendance System</h1>
   <hr class="heading-line" />
+
+  <!-- these are buttons -->
   <div class="buttons-div">
     <button onclick="checkCamera()" id="btnn3">
       <span></span><span></span><span></span><span></span>Check Camera
@@ -38,26 +35,15 @@
 
   <div id="result"></div>
 
-  <!-- <div id="alert-me" style="display: none" ></div>  id="btnn3" -->
-
-  <!-- <form id="studentDetails" onsubmit="return faceDetails()" class="hide">
-      <input type="number" min="1" id="id" />
-      <input type="text" id="name" />
-      <button type="submit">Submit</button>
-
-        <form id="mailDetails" onsubmit="return sendMail()" class="hide">
-    <input type="email" id="receiver" />
-    <button type="submit">Submit</button>
-  </form>
-    </form> -->
+  <!-- these are popup forms -->
 
   <div id="studentDetails" style="display: none">
     <div class="modal-content">
       <div class="close">+</div>
       <label>Student Details</label>
       <form onsubmit="return faceDetails()" class="hide">
-        <input type="number" min="1" id="id" placeholder="Enter Roll" />
-        <input type="text" id="name" placeholder="Enter Name" />
+        <input type="number" min="1" id="id" placeholder="Enter Roll" autocomplete="off" required />
+        <input type="text" id="name" placeholder="Enter Name" autocomplete="off" required />
         <button type="submit" class="submit-button">Submit</button>
         <button type="reset" class="clear-button">Clear</button>
       </form>
@@ -69,14 +55,13 @@
       <div class="close1">+</div>
       <label>Email Details</label>
       <form onsubmit="return sendMail()" class="hide">
-        <input type="email" id="receiver" placeholder="Enter Email" />
+        <input type="email" id="receiver" id="email" placeholder="Enter Email" autocomplete="off" required/>
         <button type="submit" class="submit-button">Submit</button>
         <button type="reset" class="clear-button">Clear</button>
       </form>
       </form>
     </div>
   </div>
-
 
   <!--This is alert-popup stuff-->
   <div id="alertpopup" style="display: none;">
@@ -85,6 +70,7 @@
     </div>
   </div>
 
+  <!-- scripts -->
   <script type="text/javascript" src="/eel.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </body>
