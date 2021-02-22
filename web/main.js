@@ -62,6 +62,12 @@ function recordAttendance() {
   });
 }
 
+function clear(){
+  document.getElementById('id').value="";
+  document.getElementById('name').value="";
+  document.getElementById('email').value="";
+}
+
 function mail() {
   hide(studentDetails);
   show(mailDetails);
@@ -77,10 +83,10 @@ document
 
 document
   .querySelector(".close")
-  .addEventListener("click", () => hide(studentDetails));
+  .addEventListener("click", () => {hide(studentDetails);clear();});
 
 document
   .querySelector(".close1")
-  .addEventListener("click", () => hide(mailDetails));
+  .addEventListener("click", () => {hide(mailDetails);clear();});
 
 //document.getElementById('btnn3').addEventListener("click",()=> showalert(alertme));
