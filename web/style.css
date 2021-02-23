@@ -29,7 +29,6 @@ body {
 
 
 /* buttons settings */
-
 button {
     background: none;
     border: none;
@@ -187,7 +186,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* css for attractive forms */
-
 #studentDetails {
     width: 100%;
     height: 100%;
@@ -295,7 +293,6 @@ input:focus {
 }
 
 /* Popup Button styling  */
-
 #alertpopup {
     width: 100%;
     height: 100%;
