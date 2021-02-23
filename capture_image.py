@@ -3,8 +3,10 @@ import cv2
 import os
 
 
-# Takes images for the entered user
-def takeImages(id, name):
+def takeImages(id, name) -> str:
+    '''
+    Takes and saves images for user with id = `id` and name = `name`
+    '''
 
     cam = cv2.VideoCapture(0)
     harcascadePath = "haarcascade_frontalface_default.xml"

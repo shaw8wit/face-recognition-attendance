@@ -6,9 +6,11 @@ import cv2
 import pandas as pd
 
 
-# -------------------------
-def recordAttendence():
-    recognizer = cv2.face.LBPHFaceRecognizer_create()  # cv2.createLBPHFaceRecognizer()
+def recordAttendence() -> str:
+    '''
+    Starts recording attendance for a session and saves it as a csv in the 'Attendance' folder.
+    '''
+    recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.read("TrainingImageLabel"+os.sep+"Trainner.yml")
     harcascadePath = "haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(harcascadePath)
@@ -35,7 +37,6 @@ def recordAttendence():
             Id, conf = recognizer.predict(gray[y:y+h, x:x+w])
 
             if conf < 100:
-
                 aa = df.loc[df['Id'] == Id]['Name'].values
                 confstr = "  {0}%".format(round(100 - conf))
                 tt = str(Id)+"-"+aa

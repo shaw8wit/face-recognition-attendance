@@ -5,9 +5,11 @@ from PIL import Image
 from threading import Thread
 
 
-# -------------- image labesl ------------------------
-
 def getImagesAndLabels(path):
+    '''
+    Returns the images with its labels for training the model
+    '''
+
     # get the path of all the files in the folder
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
     # print(imagePaths)
@@ -30,8 +32,12 @@ def getImagesAndLabels(path):
     return faces, Ids
 
 
-# ----------- train images function ---------------
 def trainImages():
+    '''
+    Trains the recognizer using all images in 'TrainingImage' folder
+
+    Saves the recognizer in the 'TrainingImageLabel' folder
+    '''
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     faces, Id = getImagesAndLabels("TrainingImage")
     Thread(target=recognizer.train(faces, np.array(Id))).start()

@@ -1,7 +1,10 @@
 import cv2
 
 
-def check():
+def check() -> str:
+    '''
+    Tries to open the camera
+    '''
 
     # Load the cascade
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')

@@ -4,6 +4,9 @@ import datetime
 
 
 def sendMail(receiver):
+    '''
+    Sends the last recorded attendance to `receiver`
+    '''
     path = 'Attendance'
     message = 'No Attendance Recorded Yet!'
     date = datetime.date.today().strftime("%B %d, %Y")
@@ -19,10 +22,10 @@ def sendMail(receiver):
 
         # send the mail
         yag.send(
-            to=receiver,
-            subject=sub,  # email subject
-            contents=f"Attendance for {date}",  # email body
-            attachments=filename  # file attached
+            to=receiver,                        # recipient of the mail
+            subject=sub,                        # email's subject
+            contents=f"Attendance for {date}",  # email's body
+            attachments=filename                # file attached
         )
         message = f"Attendance sent to {receiver}"
     os.chdir('..')

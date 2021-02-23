@@ -1,6 +1,7 @@
 # face-recognition-attendance
 
- - Project for a semester.
+Project for a semester.
+
 
 ## Screenshots
 
