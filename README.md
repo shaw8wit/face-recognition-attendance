@@ -3,6 +3,15 @@
 Project for a semester.
 
 
+## Specifications
+
++ Train the model by capturing images of people
++ Capture live attendance through the camera
++ Get the attendance in one handy file
++ Send the file through an email to anyone
++ All in a handy desktop application
+
+
 ## Screenshots
 
 ![Screenshot (180)](https://user-images.githubusercontent.com/51753810/108854076-74bb0c80-760d-11eb-974d-a56ef1c93660.png)
