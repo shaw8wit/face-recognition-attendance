@@ -1,6 +1,7 @@
 import yagmail
 import os
 import datetime
+from const import *
 
 
 def sendMail(receiver):
@@ -17,8 +18,7 @@ def sendMail(receiver):
         sub = "Attendance Report for " + str(date)
 
         # senders mail information
-        yag = yagmail.SMTP(
-            "face.recognition.attendance.sys@gmail.com", "TemporaryPassword@15")
+        yag = yagmail.SMTP(sender_mail, sender_pas)
 
         # send the mail
         yag.send(

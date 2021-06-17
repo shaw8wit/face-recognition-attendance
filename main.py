@@ -5,6 +5,7 @@ import check_camera
 import capture_image
 import train_image
 import record
+import clear_data
 import automail
 
 # initialize the backend to be used for the desktop application
@@ -34,6 +35,9 @@ def mainMenu(choice, args=True):
         elif choice == 5:
             # calling the sendMail() function from automail.py file
             res = automail.sendMail(args['receiver'])
+        elif choice == 6:
+            # calling the sendMail() function from automail.py file
+            res = clear_data.clearData()
     except Exception as e:
         # if something unexpected happens then print the error and let the caller know
         print(e)

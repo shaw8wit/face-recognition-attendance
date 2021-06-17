@@ -37,8 +37,12 @@ def takeImages(id, name) -> str:
     cv2.destroyAllWindows()
     res = "Images Saved for ID : " + id + ", Name : " + name
     row = [id, name]
-    with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
+    fname = "StudentDetails"+os.sep+"StudentDetails.csv"
+    with open(fname, 'a+') as csvFile:
         writer = csv.writer(csvFile)
+        fpath = os.getcwd() + os.sep + fname
+        if not os.path.getsize(fpath) > 0:
+            writer.writerow(['Id', 'Name'])
         writer.writerow(row)
     csvFile.close()
     return res

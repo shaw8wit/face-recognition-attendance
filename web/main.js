@@ -74,6 +74,11 @@ function mail() {
   show(mailDetails);
 }
 
+// calls method to clear all data on app
+function clearData() {
+  eel.mainMenu(6)(showAlert);
+}
+
 // displays the respective forms on button click
 document
   .getElementById("btnn")
