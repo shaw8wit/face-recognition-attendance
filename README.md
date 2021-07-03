@@ -3,6 +3,14 @@
 Project for a semester.
 
 
+## Getting Started
+
++ Clone or download and extract the repo
++ In the project folder `pip install -r requirements.txt`
++ Then run the project using `python main.py`
++ For sending mail create a `const.py` file and set `sender_mail` and `sender_pas`
+
+
 ## Specifications
 
 + Train the model by capturing images of people
